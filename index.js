@@ -50,11 +50,12 @@
         el.className = el.className.replace(new RegExp('(^|\\b)' + classNames.join('|') + '(\\b|$)', 'gi'), ' ');
     };
 
-    function GeminiScrollbar(config) {
+    function GeminiScrollbar(config, thumbMouseDownHandler) {
         this.element = null;
         this.autoshow = false;
         this.createElements = true;
-
+        this.thumbMouseDownHandler = thumbMouseDownHandler;
+        
         Object.keys(config || {}).forEach(function (propertyName) {
             this[propertyName] = config[propertyName];
         }, this);
@@ -77,7 +78,6 @@
     }
 
     GeminiScrollbar.prototype.create = function create() {
-        console.log("test");
         if (SCROLLBAR_WIDTH === 0) {
             addClass(this.element, [CLASSNAMES.prevented]);
             return this;
@@ -274,6 +274,9 @@
     };
 
     GeminiScrollbar.prototype._startDrag = function(e) {
+        if (this.thumbMouseDownHandler) {
+            this.thumbMouseDownHandler(e);
+        }
         e.stopImmediatePropagation();
         this._cursorDown = true;
         addClass(document.body, [CLASSNAMES.disable]);
