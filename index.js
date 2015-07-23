@@ -77,6 +77,7 @@
     }
 
     GeminiScrollbar.prototype.create = function create() {
+        console.log("test");
         if (SCROLLBAR_WIDTH === 0) {
             addClass(this.element, [CLASSNAMES.prevented]);
             return this;
