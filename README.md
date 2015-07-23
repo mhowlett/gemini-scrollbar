@@ -1,7 +1,7 @@
-# gemini-scrollbar
 
-[![npm-image](https://img.shields.io/npm/v/gemini-scrollbar.svg?style=flat-square)](https://www.npmjs.com/package/gemini-scrollbar)
-![bower-image](https://img.shields.io/bower/v/gemini-scrollbar.svg?style=flat-square)
+Hello World - just hacking into this to get at the mouse down event when the scrollbar thumb is pressed.
+
+# gemini-scrollbar
 
 Custom overlay-scrollbars with native scrolling mechanism for web applications (when needed).
 
