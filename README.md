@@ -1,6 +1,8 @@
 
 Hello World - just hacking into this to get at the mouse down event when the scrollbar thumb is pressed.
 
+BTW: It's a great library - you should use it.
+
 # gemini-scrollbar
 
 Custom overlay-scrollbars with native scrolling mechanism for web applications (when needed).
